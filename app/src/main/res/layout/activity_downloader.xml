@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FAFAFA">
+
+    <!-- Geri Butonu -->
+    <Button
+        android:id="@+id/btnBackToMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← Ana Menü"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:onClick="goMainMenu"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Seçim Tabları -->
+    <RadioGroup
+        android:id="@+id/rgMediaType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbVideo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Video"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbMusic"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Müzik" />
+
+    </RadioGroup>
+
+    <!-- Link Girişi -->
+    <EditText
+        android:id="@+id/etMediaLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Video veya Müzik Linki Yapıştırın"
+        android:inputType="textUri"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Önizleme Alanı -->
+    <WebView
+        android:id="@+id/WebViev"
+        android:layout_width="355dp"
+        android:layout_height="180dp" />
+
+    <!-- İndir Butonu -->
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:padding="12dp"
+        android:onClick="indir"
+        android:text="İndir"
+        android:textColor="#FFF"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Yükleme Çubuğu -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:max="100" />
+
+</LinearLayout>

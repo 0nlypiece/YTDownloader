@@ -1,0 +1,124 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Üst Menü -->
+    <LinearLayout
+        android:id="@+id/topButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/btnVideos"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🎬 Videolar"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/btnMusic"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="🎵 Müzikler"
+            android:textColor="#3F51B5"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- recyclerMusic -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMusic"
+        android:layout_width="389dp"
+        android:layout_height="567dp"
+        android:visibility="visible"
+        app:layout_anchor="@+id/menuButtonsLayout"
+        app:layout_anchorGravity="center" />
+
+    <!-- Müzik Kontrolleri -->
+    <LinearLayout
+        android:id="@+id/musicControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏮️ Önceki"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏸️ Durdur"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏭️ Sonraki"
+            android:layout_margin="4dp" />
+    </LinearLayout>
+
+    <!-- recyclerVideo -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerVideo"
+        android:layout_width="398dp"
+        android:layout_height="551dp"
+        android:visibility="gone"
+        app:layout_anchor="@+id/menuButtonsLayout"
+        app:layout_anchorGravity="center" />
+
+    <!-- Alt Menü -->
+    <LinearLayout
+        android:id="@+id/menuButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnUploader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@android:drawable/ic_menu_upload"
+            android:onClick="DownloderBtn"
+            android:padding="10dp"
+            android:text="Yükleyici" />
+
+        <Button
+            android:id="@+id/btnAccount"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@android:drawable/ic_menu_manage"
+            android:onClick="ProfileBtn"
+            android:padding="10dp"
+            android:text="Hesap Ayarları" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
