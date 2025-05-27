@@ -2,8 +2,8 @@
 for android studio
 switch branch master
 
-ı used Chaquopy 15.0
-
+my project inside send code thatstest0001@gmail.com but my send code with a little have chance  spam drop 
+projemin içindeki gönderme kodu thatstest0001@gmail.com ama gönderme kodum biraz spam düşürme şansına sahip
 
 
 ben bu projede
